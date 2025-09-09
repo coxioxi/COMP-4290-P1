@@ -21,7 +21,6 @@ public class Vigenere {
 
         try {
             File inputFile = new File(inputName);
-            System.out.println("Looking in: " + new File(".").getAbsolutePath());
             Scanner reader = new Scanner(inputFile);
             FileWriter writer = new FileWriter(outputName);
             String upperKeyPhrase = keyPhrase.toUpperCase();
