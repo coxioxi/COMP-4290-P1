@@ -88,10 +88,10 @@ public class Attack {
                     int[] alphabet = lengthsMap.get(i).get(j);
                     letterCount = 0;
                     totalLetters = 0;
-                    for (int k = 0; k < alphabet.length; ++k) {
+                    for (int value : alphabet) {
                         // Count pairwise combinations of letters in column
-                        letterCount += alphabet[k] * (alphabet[k] - 1);
-                        totalLetters += alphabet[k];
+                        letterCount += value * (value - 1);
+                        totalLetters += value;
                     }
                     // IC for this column
                     icSum += (double) letterCount / (totalLetters * (totalLetters - 1)) * ALPHABET_SIZE;
