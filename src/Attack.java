@@ -1,3 +1,12 @@
+/* This is program gives the user the option to encrypt a file and decrypt a file using a known key.
+ * It also gives the user the option to break the encryption of an encrypted file by figuring out the key used to encrypt it
+ *
+ * Author:	Samuel Costa and Ashley Gutierrez
+ * Course:	COMP 4290
+ * Assignment:	Project 1
+ * Date:	9/12/2025
+ */
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
@@ -48,6 +57,7 @@ public class Attack {
         Scanner in = new Scanner(System.in);
         System.out.print("Please enter file to analyze: ");
         String analyzeName = in.next(); // get input filename from user
+        System.out.println();
 
         try {
             // Map to store letter counts for each possible key length
@@ -104,7 +114,7 @@ public class Attack {
             double current;
             double closest = abs(averageIc[0] - 1.73);
             for (int i = 0; i < averageIc.length; ++i) {
-                System.out.printf("Length: %d\tIC: %.2f%n", i + 1, averageIc[i]);
+                System.out.printf("Length: %d\t\tIC: %.2f%n", i + 1, averageIc[i]);
                 current = abs(averageIc[i] - 1.73);
                 if (current < closest) {
                     closest = current;

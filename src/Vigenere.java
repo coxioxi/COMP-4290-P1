@@ -1,3 +1,12 @@
+/* This is program gives the user the option to encrypt a file and decrypt a file using a known key.
+ * It also gives the user the option to break the encryption of an encrypted file by figuring out the key used to encrypt it
+ *
+ * Author:	Samuel Costa and Ashley Gutierrez
+ * Course:	COMP 4290
+ * Assignment:	Project 1
+ * Date:	9/12/2025
+ */
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
