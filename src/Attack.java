@@ -104,7 +104,7 @@ public class Attack {
             double current;
             double closest = abs(averageIc[0] - 1.73);
             for (int i = 0; i < averageIc.length; ++i) {
-                System.out.printf("Length: %d\t\tIC: %.2f%n", i + 1, averageIc[i]);
+                System.out.printf("Length: %d\tIC: %.2f%n", i + 1, averageIc[i]);
                 current = abs(averageIc[i] - 1.73);
                 if (current < closest) {
                     closest = current;
@@ -165,7 +165,8 @@ public class Attack {
             try {
                 File inputFile = new File(analyzeName);
                 reader = new Scanner(inputFile);
-                FileWriter writer = new FileWriter("proposal.cipher.cracked");
+                String outputName = analyzeName + ".cracked";
+                FileWriter writer = new FileWriter(outputName);
                 index = 0;
                 int newLetter;
 
@@ -192,7 +193,7 @@ public class Attack {
 
                 reader.close();
                 writer.close();
-                System.out.println("Decrypted content written to proposal.cipher.cracked");
+                System.out.println("Decrypted content written to " + outputName);
 
             } catch (IOException e) {
                 throw new RuntimeException(e);
